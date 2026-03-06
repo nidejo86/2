@@ -1,0 +1,35 @@
+crear nuevo repositorio desde GitHub web
+
+abrir terminar desde la ruta que se quiere subir
+
+ejecutar:
+
+git init
+git status
+git add . --> agrega todo el contenido
+git commit -m "comentario"
+git config --global user.email nidejo86@gmail.com
+git config --global user.name nidejo86
+git commit -m "comentario" --> On branch master nothing to commit, working tree clean
+git branch -M main
+git remote add origin https://github.com/nidejo86/XXXXXXXXX.git
+git push -u origin main
+
+Si da error: failed to push some refs to 'https://github.com/nidejo86/XXXXXXXXX.git'
+es porque al crear el repositorio en GitHub web se añadio un README, .gitignore o una
+licencia. Entonces esto crea un conflicto con el repositorio local, ya que no tiene 
+ninguno de esos tres ficheros
+
+
+
+SOLUCIÓN
+git pull origin main --allow-unrelated-histories
+:q!
+git push -u origin main
+
+
+
+Tu repositorio local ya está en GitHub. A partir de ahora, solo necesitarás:
+git add .
+git commit -m "mensaje"
+git push
